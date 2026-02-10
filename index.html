@@ -23,7 +23,7 @@
         overflow: hidden;
     }
 
-    /* قلب‌های محو پس‌زمینه */
+    
     .bg-heart {
         position: absolute;
         font-size: 4rem;
@@ -82,7 +82,7 @@
         color: #ff4d6d;
     }
 
-    /* صفحه نهایی */
+    
     #final {
         display: none;
         flex-direction: column;
@@ -129,7 +129,7 @@
 </head>
 <body>
 
-<!-- قلب‌های پس‌زمینه -->
+
 <div class="bg-heart h1">❤️</div>
 <div class="bg-heart h2">❤️</div>
 <div class="bg-heart h3">❤️</div>
@@ -162,7 +162,6 @@ const final = document.getElementById("final");
 let yesSize = 1.2;
 let noClickCount = 0;
 
-// پیام‌های رندوم
 const messages = [
     "نزن دیگه لطفاً 😭",
     "جواب اشتباس 😒",
@@ -177,7 +176,6 @@ const messages = [
     "نه رو نزن دیگهههه 😭"
 ];
 
-// کلیک روی آره → بزرگ شدن + رفتن به صفحه نهایی
 yes.addEventListener("click", () => {
     yesSize += 0.25;
     yes.style.fontSize = yesSize + "rem";
@@ -189,9 +187,8 @@ yes.addEventListener("click", () => {
     }, 600);
 });
 
-// تابع فرار کردن
 function escapeNo() {
-    //const x = Math.random() * (window.innerWidth - 120);
+    const x = Math.random() * (window.innerWidth - 120);
     const y = Math.random() * (window.innerHeight - 120);
     no.style.position = "absolute";
     no.style.left = x + "px";
@@ -213,7 +210,6 @@ no.addEventListener("click", () => {
     escapeNo();
 });
 
-// رفتن موس روی نه → همیشه فرار
 no.addEventListener("mouseover", escapeNo);
 </script>
 
